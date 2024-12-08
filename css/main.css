@@ -590,20 +590,44 @@ strong {
   color: #fff;
 }
 
-@media (max-width: 992px) {
+/* Desktop (>= 992px) */
+@media (min-width: 992px) {
   .stats-section .stat-number {
-      font-size: 2.5rem;
+    font-size: 3rem;
   }
   .stats-section p {
-      font-size: 1rem;
+    font-size: 1rem;
+  }
+  .stats-section .row {
+    flex-wrap: nowrap; /* Ensure stats stay in a single row */
   }
 }
 
-@media (max-width: 768px) {
+/* Tablet (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
   .stats-section .stat-number {
-      font-size: 2rem;
+    font-size: 2.5rem;
+  }
+  .stats-section p {
+    font-size: 1rem;
   }
 }
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+  .stats-section .stat-number {
+    font-size: 2rem;
+  }
+
+  .stats-section .row {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+
+  .stats-section p {
+    font-size: 0.9rem;
+  }
+}
+
 
 
 
@@ -894,16 +918,42 @@ strong {
   display: block;
 }
 
-@media (max-width: 992px) {
-    .partner-img {
-        height: 120px; /* Adjust height for smaller screens */
-    }
+/* Desktop (>= 992px) */
+@media (min-width: 992px) {
+  .col-lg-2 {
+    flex: 0 0 20%; /* Ensure 5 partners per row */
+    max-width: 20%;
+  }
+
+  .row.justify-content-center {
+    display: flex;
+    justify-content: center; /* Center align the second row with 4 partners */
+    gap: 1rem; /* Optional spacing between partners */
+  }
 }
 
-@media (max-width: 768px) {
-    .partner-img {
-        height: 100px; /* Further reduce height for mobile devices */
-    }
+/* Tablet (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-4 {
+    flex: 0 0 33.333%; /* Ensure 3 partners per row */
+    max-width: 33.333%;
+  }
+
+  .partner-img {
+    height: 120px; /* Adjust height for smaller screens */
+  }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+  .col-12 {
+    flex: 0 0 100%; /* Ensure 1 partner per row */
+    max-width: 100%;
+  }
+
+  .partner-img {
+    height: 100px; /* Adjust height for mobile devices */
+  }
 }
 
 
