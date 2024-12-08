@@ -782,6 +782,98 @@ strong {
 
 
 /*---------------------------------------
+  EVENTS             
+-----------------------------------------*/
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.carousel-item.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+
+.carousel-section {
+  background-image: url('../images/edward-unsplash-blur.jpg');
+  background-color: #704010;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 50px 0;
+}
+
+.carousel-item img {
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: var(--border-radius-medium);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.carousel-control-prev {
+  left: -20px; /* Closer to the edge */
+}
+
+.carousel-control-next {
+  right: -20px; /* Closer to the edge */
+}
+
+.event-info {
+  padding: 20px;
+}
+
+.event-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.event-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-item {
+    flex-direction: column;
+    height: auto; /* Allow height to adjust for smaller screens */
+  }
+
+  .carousel-item img {
+    max-height: 50vh; /* Reduce the max height for smaller screens */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%; /* Adjust control size for mobile */
+  }
+}
+
+
+/*---------------------------------------
   PARTNERS              
 -----------------------------------------*/
 
