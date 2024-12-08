@@ -39,6 +39,17 @@ body {
   font-family: var(--body-font-family); 
 }
 
+/* For all elements */
+::-webkit-scrollbar {
+  display: none; /* Hides scrollbars in WebKit-based browsers */
+}
+
+html, body {
+  scrollbar-width: none; /* Hides scrollbars in Firefox */
+  -ms-overflow-style: none; /* Hides scrollbars in IE and Edge */
+}
+
+
 
 /*---------------------------------------
   TYPOGRAPHY               
@@ -354,7 +365,7 @@ strong {
   top: 0;
   right: 0;
   left: 0;
-  margin-top: 51px;
+  margin-top: 40px;
 }
 
 .sticky-wrapper.is-sticky .navbar {
@@ -468,7 +479,8 @@ strong {
   position: relative;
   overflow: hidden;
   padding-top: 100px;
-  height: calc(100vh - 51px);
+  height: 100vh;
+  /* height: calc(100vh - 40px); in case of announcement bar uncomment this */
 }
 
 .hero-section small {
@@ -491,6 +503,16 @@ strong {
 .hero-section .container .row {
   height: 100%;
 }
+
+.hero-section .btn.custom-btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-section .btn.custom-btn:hover {
+  transform: scale(1.1);
+  background-color: #f8f9fa; /* Slightly lighter shade */
+}
+
 
 
 /*---------------------------------------
@@ -876,7 +898,8 @@ strong {
   color: var(--white-color);
   font-size: var(--copyright-font-size);
   display: block;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   text-align: center;
   width: 35px;
   height: 35px;
