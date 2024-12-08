@@ -784,20 +784,20 @@ strong {
 /*---------------------------------------
   PARTNERS              
 -----------------------------------------*/
-/* Partner Section Styling */
+
 .partners-section {
-  background: linear-gradient(90deg, #ff6600, #ff9933);
+  background: white;
   padding: 60px 0;
 }
 
 .partners-section h2 {
-  color: #fff;
+  color: black;
 }
 
 .partner-img {
-  height: 150px; /* Set fixed height for all partner images */
-  width: 100%; /* Ensure images take full width of container */
-  object-fit: contain; /* Preserve aspect ratio while filling the container */
+  height: 150px; 
+  width: 100%;
+  object-fit: contain;
   margin: auto;
   display: block;
 }
