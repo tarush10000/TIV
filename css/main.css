@@ -1205,3 +1205,27 @@ strong {
   }
 }
 
+
+.team-image
+{
+  height:350px;
+  width:500px;
+}
+
+.btn-square
+{
+    height:28px;
+    width:28px;  
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.team-item
+{
+  box-shadow: 5px 5px 10px gray;
+}
