@@ -70,11 +70,11 @@
             font-size: var(--copyright-font-size);
         } */
 
-        #home-link {
+        #custom-nav-link-teams-page {
             color: white;
         }
 
-        #home-link:hover {
+        #custom-nav-link-teams-page:hover {
             color: #EE5007;
         }
     </style>
@@ -106,10 +106,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
                         <li class="nav-item">
-                            <a id="home-link" class="nav-link" href="index.html">Home</a>
+                            <a id="custom-nav-link-teams-page" class="nav-link" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="team.html">Team</a>
+                            <a id="custom-nav-link-teams-page" class="nav-link click-scroll" href="./index.html#section_2">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="custom-nav-link-teams-page" class="nav-link click-scroll" href="./index.html#section_3">Our Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="custom-nav-link-teams-page" class="nav-link click-scroll" href="./index.html#section_6">Partners</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="custom-nav-link-teams-page" class="nav-link" href="./team.html">Team</a>
                         </li>
                     </ul>
 
@@ -132,9 +141,9 @@
                     navbar.style.backgroundColor = 'transparent'; // Semi-transparent background when at the top
 
                     // Reset link backgrounds
-                    links.forEach(link => {
+                    /* links.forEach(link => {
                         link.style.color = 'white'; // Reset text color
-                    });
+                    });*/
                 }
             });
         </script>
