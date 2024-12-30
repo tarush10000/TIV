@@ -72,24 +72,27 @@
 
 <body>
     <main>
-        <header class="header" style="position: relative; background-image: url('images/header.jpg'); background-size: cover; background-position: center; height: 700px; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <header class="header"
+            style="position: relative; background-image: url('./images/header.JPG'); background-size: cover; background-position: center; height: 700px; display: flex; align-items: center; justify-content: center; text-align: center;">
             <!-- Overlay Div -->
-            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5);"></div>
+            <div
+                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5);">
+            </div>
             <!-- Text Div -->
             <div style="position: relative; color: white; z-index: 1; padding: 20px; border-radius: 10px;">
                 <h1 style="opacity: 1;">Our Team</h1>
             </div>
         </header>
-        
+
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color: transparent;">
             <div class="container">
                 <a class="navbar-brand" href="index.html" style="color:white; ">The Indian Vidyarthi</a>
-        
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-        
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
                         <li class="nav-item">
@@ -99,25 +102,26 @@
                             <a class="nav-link click-scroll" href="team.html" style="color:white;">Team</a>
                         </li>
                     </ul>
-        
-                    <a href="index.html#section_7" class="btn custom-btn d-lg-block d-none" style="background-color: #007bff; color: white;">Contact Us</a>
+
+                    <a href="index.html#section_7" class="btn custom-btn d-lg-block d-none"
+                        style="background-color: #007bff; color: white;">Contact Us</a>
                 </div>
             </div>
         </nav>
-        
+
         <script>
             // JavaScript to change navbar background and anchor background on scroll
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 const navbar = document.querySelector('.navbar');
                 const links = document.querySelectorAll('.nav-link');
-        
+
                 if (window.scrollY > 0) {
                     navbar.style.backgroundColor = 'rgba(0, 0, 0, 1)'; // Dark opaque background when scrolled
-        
-                    
+
+
                 } else {
                     navbar.style.backgroundColor = 'transparent'; // Semi-transparent background when at the top
-                    
+
                     // Reset link backgrounds
                     links.forEach(link => {
                         link.style.color = 'white'; // Reset text color
@@ -125,10 +129,10 @@
                 }
             });
         </script>
-        
-        
-        
-    
+
+
+
+
 
         <div class="container-xxl bg-white p-0">
             <!-- <div class="container d-flex justify-content-center align-items-center">
@@ -174,9 +178,12 @@
                                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="team-item rounded overflow-hidden">
                                         <div class="position-relative">
-                                            <img class="img-fluid team-image" src="images/Meet Sijariya.webp" alt="Core member">
-                                            <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/meet-sijariya-81961a231/">
+                                            <img class="img-fluid team-image" src="images/Meet Sijariya.webp"
+                                                alt="Core member">
+                                            <div
+                                                class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                                <a class="btn btn-square mx-1"
+                                                    href="https://www.linkedin.com/in/meet-sijariya-81961a231/">
                                                     <i class="fab fa-linkedin"></i>
                                                 </a>
                                             </div>
@@ -193,7 +200,8 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/Rumish.webp" alt="Core Member">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/rumish-saif">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
@@ -209,7 +217,8 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/Suhanee.webp" alt="Core Member">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square mx-1"
                                             href="https://www.linkedin.com/in/suhanee-chugh-a10b7a1b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
                                             <i class="fab fa-linkedin"></i>
@@ -225,7 +234,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="container-xxl py-5">
                 <div class="container">
                     <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
@@ -236,7 +245,8 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/Tanav Bhatia.webp" alt="Director">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square mx-1"
                                             href="https://www.linkedin.com/in/tanav-bhatia-cbs?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                                             <i class="fab fa-linkedin"></i>
@@ -253,7 +263,8 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/aarya formal pic.webp" alt="Director">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square mx-1" href="#">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
@@ -269,7 +280,8 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/amandeep.webp" alt="Director">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square mx-1"
                                             href="https://www.linkedin.com/in/aman-deep-savaranya-0973ab261/">
                                             <i class="fab fa-linkedin"></i>
@@ -286,7 +298,8 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/Vardaan Gahlot.webp" alt="Director">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square mx-1"
                                             href="https://www.linkedin.com/in/vardaan-gahlot-67447416b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                                             <i class="fab fa-linkedin"></i>
@@ -302,7 +315,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="container-xxl py-5">
                 <div class="container">
                     <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
@@ -313,7 +326,8 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/vigaas_singh.webp" alt="Executive">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square mx-1"
                                             href="https://www.linkedin.com/in/vigaas-singh-8521321b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                                             <i class="fab fa-linkedin"></i>
@@ -330,7 +344,8 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/Piyush Headshot.webp" alt="Executive">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/piyushdevlpr/">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
@@ -346,7 +361,8 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/unnati.webp" alt="Executive">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square mx-1" href="#">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
@@ -362,9 +378,9 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/Avi Jain.webp" alt="Executive">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                        <a class="btn btn-square mx-1"
-                                            href="https://www.linkedin.com/in/thatavijain/">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                        <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/thatavijain/">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
                                     </div>
@@ -379,8 +395,10 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/manan_singh.webp" alt="Executive">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                        <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/manan-singh-a3186222a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                        <a class="btn btn-square mx-1"
+                                            href="https://www.linkedin.com/in/manan-singh-a3186222a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
                                     </div>
@@ -395,7 +413,8 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/anshika_raj.webp" alt="Executive">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/anzeeka">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
@@ -413,8 +432,10 @@
                                     <div class="team-item rounded overflow-hidden">
                                         <div class="position-relative">
                                             <img class="img-fluid team-image" src="images/Kashi.webp" alt="Executive">
-                                            <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/kashi-jolly-6112b7332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+                                            <div
+                                                class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                                <a class="btn btn-square mx-1"
+                                                    href="https://www.linkedin.com/in/kashi-jolly-6112b7332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
                                                     <i class="fab fa-linkedin"></i>
                                                 </a>
                                             </div>
@@ -427,11 +448,11 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
-            
+
             <div class="container-xxl py-5">
                 <div class="container">
                     <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
@@ -441,8 +462,10 @@
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
-                                    <img class="img-fluid team-image" src="images/Tarush Agarwal.webp" alt="Web Developer">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <img class="img-fluid team-image" src="images/Tarush Agarwal.webp"
+                                        alt="Web Developer">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/tarush10000/">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
@@ -458,8 +481,10 @@
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
                                     <img class="img-fluid team-image" src="images/Avikshit.webp" alt="Web Developer">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                        <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/avikshit-kumar-7aa5661b8/">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                        <a class="btn btn-square mx-1"
+                                            href="https://www.linkedin.com/in/avikshit-kumar-7aa5661b8/">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
                                     </div>
@@ -473,9 +498,12 @@
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="team-item rounded overflow-hidden">
                                 <div class="position-relative">
-                                    <img class="img-fluid team-image" src="images/Hardik Bansal.webp" alt="Web Developer">
-                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                        <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/hardikbansal2064/">
+                                    <img class="img-fluid team-image" src="images/Hardik Bansal.webp"
+                                        alt="Web Developer">
+                                    <div
+                                        class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                        <a class="btn btn-square mx-1"
+                                            href="https://www.linkedin.com/in/hardikbansal2064/">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
                                     </div>
@@ -489,7 +517,7 @@
                     </div>
                 </div>
             </div>
-            
+
 
         </div>
 
@@ -545,7 +573,8 @@
                         <p class="text-white d-flex mt-3 mb-2">
                             India Gate, New Delhi, 110001</p>
 
-                        <a class="link-fx-1 color-contrast-higher mt-3" href="https://maps.app.goo.gl/9CWHVti4EurRk4nu9">
+                        <a class="link-fx-1 color-contrast-higher mt-3"
+                            href="https://maps.app.goo.gl/9CWHVti4EurRk4nu9">
                             <span>Our Maps</span>
                             <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
