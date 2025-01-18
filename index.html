@@ -28,16 +28,17 @@
 
     <!-- CSS FILES -->
     <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
-
     <main>
 
         <!-- <header class="site-header">
@@ -109,7 +110,7 @@
                         <div class="col-12 mt-auto mb-5 text-center">
                             <a class="btn custom-btn smoothscroll d-inline-flex justify-content-center align-items-center rounded-circle"
                                 href="#section_2"
-                                style="width: 60px; height: 60px; background-color: white; color: black; text-decoration: none;">
+                                style="width: 60px; height: 60px;  text-decoration: none;">
                                 <i class="bi-arrow-down"></i>
                             </a>
                         </div>
@@ -248,7 +249,7 @@
 
 
 
-        <section class="artists-section section-padding" id="section_3">
+        <section class="artists-section section-padding" id="section_3" data-aos="fade-up">
             <div class="container">
                 <div class="row justify-content-center">
                     <!-- Section Heading -->
@@ -268,7 +269,7 @@
                                     <strong>Monthly Newsletter</strong>
                                 </p>
 
-                                <p>
+                                <p style="color: black;">
                                     Our newsletters provide the latest updates on youth initiatives, events, and
                                     resources. Stay informed and inspired with monthly insights.
                                 </p>
@@ -296,7 +297,7 @@
                                     <strong>Summer Program</strong>
                                 </p>
 
-                                <p>
+                                <p style="color: black;">
                                     An engaging program designed to equip participants with skills in leadership,
                                     collaboration, and sustainability through hands-on activities.
                                 </p>
@@ -320,7 +321,7 @@
                                     <strong>Climate Sustainability Initiatives</strong>
                                 </p>
 
-                                <p>
+                                <p style="color: black;">
                                     Our initiatives focus on raising awareness and implementing strategies for a
                                     sustainable future, emphasizing youth-driven solutions.
                                 </p>
@@ -340,7 +341,7 @@
         </section>
 
 
-        <section class="schedule-section section-padding" id="section_5">
+        <section class="schedule-section section-padding" id="section_5" data-aos="fade-up">
             <div class="container">
                 <div class="row">
 
@@ -434,7 +435,7 @@
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel"
                         data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span  class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
@@ -524,7 +525,7 @@
 
 
 
-        <section class="contact-section section-padding" id="section_7">
+        <section class="contact-section section-padding" id="section_7"data-aos="fade-up">
             <div class="container">
                 <div class="row">
 
@@ -609,20 +610,23 @@
                     <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
                         <ul class="social-icon d-flex justify-content-lg-end">
                             <li class="social-icon-item">
+                                <a href="https://www.linkedin.com/company/theindianvidyarthi" class="social-icon-link">
+                                    <span class="bi-facebook"></span>
+                                    
+                                </a>
+                            </li>
+                            <li class="social-icon-item">
                                 <a href="https://twitter.com/theivofficial" class="social-icon-link">
                                     <span class="bi-twitter"></span>
                                 </a>
                             </li>
 
+                          
+
+                          
                             <li class="social-icon-item">
                                 <a href="https://www.instagram.com/theindianvidyarthi/" class="social-icon-link">
                                     <span class="bi-instagram"></span>
-                                </a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="https://www.linkedin.com/company/theindianvidyarthi" class="social-icon-link">
-                                    <span class="bi-linkedin"></span>
                                 </a>
                             </li>
                         </ul>
@@ -735,6 +739,14 @@
     <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/stats.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 270,
+        duration: 500,
+        easing: "ease-in-sin",
+      });
+    </script>
 
 </body>
 
