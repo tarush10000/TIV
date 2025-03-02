@@ -447,41 +447,39 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-12 mx-auto">
-                        <h2 class="text-center mb-4">Our Partners</h2>
+                        <h1 class="text-center mb-4">Our Partners</h1>
                     </div>
                 </div>
-
-                <div class="row text-center">
+        
+                <div class="row text-center mb-5">
                     <!-- Partner 1 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
                         <a href="https://studomatrix.in/" target="_blank">
                             <img src="images/partner1.webp" alt="Studomatrix" class="img-fluid partner-img">
                         </a>
                     </div>
-
+        
                     <!-- Partner 2 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-                        <a href="https://yourcommonwealth.org/youth-network/commonwealth-students-association-csa/"
-                            target="_blank">
-                            <img src="images/partner2.webp" alt="Commonwealth Students Association"
-                                class="img-fluid partner-img">
+                        <a href="https://yourcommonwealth.org/youth-network/commonwealth-students-association-csa/" target="_blank">
+                            <img src="images/partner2.webp" alt="Commonwealth Students Association" class="img-fluid partner-img">
                         </a>
                     </div>
-
+        
                     <!-- Partner 3 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
                         <a href="http://thesoftmove.com/" target="_blank">
                             <img src="images/partner3.webp" alt="The Softmove" class="img-fluid partner-img">
                         </a>
                     </div>
-
+        
                     <!-- Partner 4 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
                         <a href="https://www.instagram.com/itsdesignare/" target="_blank">
                             <img src="images/partner4.webp" alt="Designare" class="img-fluid partner-img">
                         </a>
                     </div>
-
+        
                     <!-- Partner 5 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
                         <a href="https://www.tearsoftheearth.in/" target="_blank">
@@ -489,37 +487,36 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="row text-center">
+        
+                <div class="row text-center mb-5">
                     <!-- Partner 6 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
                         <a href="https://www.ecbsustainableyouth.org/" target="_blank">
-                            <img src="images/partner6.webp" alt="ECB Sustainable Youth Foundation"
-                                class="img-fluid partner-img">
+                            <img src="images/partner6.webp" alt="ECB Sustainable Youth Foundation" class="img-fluid partner-img">
                         </a>
                     </div>
-
+        
                     <!-- Partner 7 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
                         <a href="https://www.manan-singh.com/s-projects-side-by-side" target="_blank">
                             <img src="images/partner7.webp" alt="Young Minds" class="img-fluid partner-img">
                         </a>
                     </div>
-
+        
                     <!-- Partner 8 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
                         <a href="https://www.linkedin.com/company/nova-verse/people/" target="_blank">
                             <img src="images/partner8.webp" alt="Nova" class="img-fluid partner-img">
                         </a>
                     </div>
-
+        
                     <!-- Partner 9 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
                         <a href="https://www.linkedin.com/company/nova-verse/people/" target="_blank">
                             <img src="images/partner9.webp" alt="Nova" class="img-fluid partner-img">
                         </a>
                     </div>
-
+        
                     <!-- Partner 10 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
                         <a href="https://www.earthday.org/" target="_blank">
@@ -527,15 +524,25 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="row text-center justify-content-center">
+        
+                <div class="row text-center">
                     <!-- Partner 11 -->
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
                         <a href="https://yourcommonwealth.org/youth-network/commonwealth-youth-climate-change-network-cycn/" target="_blank">
-                            <img src="images/partner11.png" alt="cycn" class="img-fluid partner-img">
+                            <img src="images/partner11.png" alt="CYCN" class="img-fluid partner-img">
+                        </a>
+                    </div>
+        
+                    <!-- Partner 12 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+                        <a href="https://www.hultprize.org/" target="_blank">
+                            <img src="images/partner12.png" alt="HULT Prize" class="img-fluid partner-img">
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
-
+        
 
 
         <section class="contact-section section-padding" id="section_7"data-aos="fade-up">
@@ -760,7 +767,34 @@
         easing: "ease-in-sin",
       });
     </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
 
+    function updateActiveLink() {
+        let scrollPosition = window.scrollY + 150; // Adjust for navbar height
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${section.id}`) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
+    }
+
+    window.addEventListener("scroll", updateActiveLink);
+    window.addEventListener("load", updateActiveLink);
+});
+
+</script>
 </body>
 
 </html>
