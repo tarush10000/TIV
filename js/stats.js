@@ -33,3 +33,24 @@ window.addEventListener('scroll', () => {
         animateNumbers();
     }
 });
+
+
+
+
+const cursorBall = document.querySelector('.cursor-ball');
+  let x = 0, y = 0;
+  let targetX = 0, targetY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+  });
+
+  function animate() {
+    x += (targetX - x) * 0.1;
+    y += (targetY - y) * 0.1;
+    cursorBall.style.transform = `translate(${x}px, ${y}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
