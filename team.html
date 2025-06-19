@@ -775,6 +775,23 @@
     <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/stats.js"></script>
+    <div id="cursor-outer"></div>
+<div id="cursor-inner"></div>
+<script>
+  const innerCursor = document.getElementById("cursor-inner");
+  const outerCursor = document.getElementById("cursor-outer");
+
+  document.addEventListener("mousemove", function(e) {
+    const x = e.clientX;
+    const y = e.clientY;
+
+    innerCursor.style.left = x + 'px';
+    innerCursor.style.top = y + 'px';
+
+    outerCursor.style.left = x + 'px';
+    outerCursor.style.top = y + 'px';
+  });
+</script>
 </body>
 
 </html>
