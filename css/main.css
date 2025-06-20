@@ -338,6 +338,18 @@ strong {
   border-color: var(--white-color);
   color: var(--white-color);
 }
+
+.navbar-nav .nav-link[href="#section_3"]
+ {
+   width: 125px;
+}
+.navbar-nav .nav-link[href="./index.html#section_3"]
+ {
+   width: 125px;
+}
+.navbar-nav .nav-link[href="summer_school.html"]{
+  width: 169px;
+}
 .navbar-collapse{
   gap: 0px;
   max-width: 100%;
