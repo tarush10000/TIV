@@ -33,3 +33,7 @@ window.addEventListener('scroll', () => {
         animateNumbers();
     }
 });
+
+
+
+
