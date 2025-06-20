@@ -1400,18 +1400,4 @@ strong {
 
 
 
-.cursor-ball {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  background-color: rgb(122, 0, 128);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out;
-}
-
 
