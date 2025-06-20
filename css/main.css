@@ -36,7 +36,32 @@
 
 body {
   background-color: var(--white-color);
-  font-family: var(--body-font-family); 
+  font-family: var(--body-font-family);
+  cursor:none; 
+}
+
+#cursor-inner,
+#cursor-outer {
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+#cursor-inner {
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 50%;
+  transition: all 0.02s ease;
+}
+
+#cursor-outer {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 50%;
+  transition: all 0.04s ease;
 }
 
 /* For all elements */
@@ -283,15 +308,6 @@ strong {
 }
 
 
-
-
-
-
-
-
-
-
-
 /*---------------------------------------
   CUSTOM ICON COLOR               
 -----------------------------------------*/
@@ -312,8 +328,9 @@ strong {
   font-weight: var(--font-weight-bold);
   line-height: normal;
   transition: all 0.3s;
-  padding: 10px 25px;
+  padding: 10px 20px;
   width: 130px;
+
 }
 
 .custom-btn:hover {
@@ -349,10 +366,6 @@ strong {
 }
 .navbar-nav .nav-link[href="summer_school.html"]{
   width: 169px;
-}
-.navbar-collapse{
-  gap: 0px;
-  max-width: 100%;
 }
 
 /*---------------------------------------
@@ -704,36 +717,42 @@ strong {
 .work-thumb {
   position: relative;
   overflow: hidden;
-  margin-bottom: 30px;
+  width: 100%;
+  height: 700px; /* or any fixed height you want */
 }
 
 .work-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: var(--border-radius-medium);
   display: block;
-  width: 100%;
-}
-
-.work-thumb:hover .work-hover {
-  transform: translateY(0);
-  opacity: 1;
 }
 
 .work-hover {
-  background-color: var(--primary-color);
-  background-color: rgba(248, 203, 46, 0.75);
-  border-radius: var(--border-radius-medium);
-  backdrop-filter: blur(5px) saturate(180%);
-  -webkit-backdrop-filter: blur(5px) saturate(180%);
-  margin: 20px;
-  padding: 35px;
-  transition: all 0.5s ease;
-  transform: translateY(100%);
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  width: 80%; /* shorter than image width */
+  max-height: 80%; /* shorter than image height */
+  background-color: rgba(227, 147, 17, 0.95);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
   opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+.work-thumb:hover .work-hover {
+  opacity: 1;
 }
+
 
 .work-hover p strong {
   color: var(--white-color);
@@ -743,7 +762,7 @@ strong {
 }
 
 .work-hover p a {
-  color: var(--secondary-color);
+  color: black;
 }
 
 .work-hover p a:hover {
@@ -1133,6 +1152,12 @@ strong {
 }
 
 
+.work-image-wrap img {
+    height: 700px;         /* or any fixed height you prefer */
+    object-fit: cover;     /* ensures image fills space without distortion */
+    width: 100%;           /* full width of container */
+    display: block;
+}
 
 
 @keyframes spinAround {
@@ -1272,6 +1297,16 @@ strong {
     border-radius: 50%;
     background-color: white;
 }
+.btn-square:hover {
+  background-color: #0077b5;
+  color: white;
+  transform: scale(1.2);
+  box-shadow: 0 0 8px #0077b5;
+}
+.btn-square:hover i {
+  color: white;
+}
+
 
 .team-item
 {
@@ -1284,8 +1319,6 @@ strong {
 }
 
 
-
-
 .join-now-section {
   /* background: #f5f5f5; */
   padding: 60px 40px;
@@ -1381,97 +1414,4 @@ strong {
   transition: transform 0.1s ease-out;
 }
 
-.join-now-section {
-  /* background: #f5f5f5; */
-  padding: 60px 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.join-now-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /* background: white; */
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  max-width: 1100px;
-  width: 100%;
-}
-
-.join-now-left {
-  flex: 1;
-  padding: 20px;
-  min-width: 250px;
-}
-
-.join-now-left h2 {
-  font-size: 2rem;
-  color: #ff5a00;
-  margin-bottom: 10px;
-}
-
-.join-now-left p {
-  font-size: 1rem;
-  color: #333;
-}
-
-.join-now-right {
-  flex: 1;
-  padding: 20px;
-  min-width: 250px;
-}
-
-.join-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.join-form input {
-  padding: 12px 16px;
-  font-size: 0.8rem;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.join-form input:focus {
-  border-color: lightblue;
-  box-shadow: 0 0 8px rgba(255, 90, 0, 0.2);
-  outline: none;
-}
-
-.join-form button {
-  padding: 12px 16px;
-  background-color: #ff5a00;
-  color: white;
-  border: none;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.join-form button:hover {
-  background-color: #e14b00;
-  transform: scale(1.05);
-}
-
-
-
-.cursor-ball {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  background-color: rgb(122, 0, 128);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out;
-}

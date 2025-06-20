@@ -40,6 +40,8 @@
 </head>
 
 <body>
+<div class="cursor-ball"></div>
+
     <main>
 
         <!-- <header class="site-header">
@@ -70,7 +72,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                     <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_1">Home</a>
                         </li>
@@ -260,84 +262,53 @@
                         <h2 class="mb-4">Our Work</h2>
                     </div>
 
-                    <!-- Work 1: Newsletter -->
-                    <div class="col-lg-5 col-12">
-                        <div class="work-thumb">
-                            <div class="work-image-wrap">
-                                <img src="images/work/newsletter.webp" class="work-image img-fluid" alt="Newsletter">
-                            </div>
+                    <div class="row">
+  <!-- Work 1: Newsletter -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="work-thumb">
+      <div class="work-image-wrap">
+        <img src="images/work/newsletter.webp" class="work-image img-fluid" alt="Newsletter">
+      </div>
+      <div class="work-hover">
+        <p><strong>Monthly Newsletter</strong></p>
+        <p style="color:black">Stay informed with updates on youth events and resources.</p>
+        <hr>
+        <p class="mb-0"><strong>Read More:</strong> <a href="#">View Archive</a></p>
+      </div>
+    </div>
+  </div>
 
-                            <div class="work-hover">
-                                <p>
-                                    <strong>Monthly Newsletter</strong>
-                                </p>
+  <!-- Work 2: Summer Program -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="work-thumb">
+      <div class="work-image-wrap">
+        <img src="images/work/summer-program.webp" class="work-image img-fluid" alt="Summer Program">
+      </div>
+      <div class="work-hover">
+        <p><strong>Summer Program</strong></p>
+        <p style="color:black">Build leadership, collaboration, and sustainability skills.</p>
+        <hr>
+        <p class="mb-0"><strong>Learn More:</strong> <a href="#">Explore Details</a></p>
+      </div>
+    </div>
+  </div>
 
-                                <p style="color: black;">
-                                    Our newsletters provide the latest updates on youth initiatives, events, and
-                                    resources. Stay informed and inspired with monthly insights.
-                                </p>
+  <!-- Work 3: Climate Sustainability -->
+  <div class="col-lg-4 col-md-12 mb-4">
+    <div class="work-thumb">
+      <div class="work-image-wrap">
+        <img src="images/work/climate-sustainability.webp" class="work-image img-fluid" alt="Climate Sustainability">
+      </div>
+      <div class="work-hover">
+        <p><strong>Climate Sustainability</strong></p>
+        <p style="color:black">Engage in youth-led initiatives for a greener future.</p>
+        <hr>
+        <p class="mb-0"><strong>Get Involved:</strong> <a href="#">Join Projects</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Read More:</strong>
-                                    <a href="#">View Newsletter Archive</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Work 2: Summer Program -->
-                    <div class="col-lg-5 col-12">
-                        <div class="work-thumb">
-                            <div class="work-image-wrap">
-                                <img src="images/work/summer-program.webp" class="work-image img-fluid"
-                                    alt="Summer Program">
-                            </div>
-
-                            <div class="work-hover">
-                                <p>
-                                    <strong>Summer Program</strong>
-                                </p>
-
-                                <p style="color: black;">
-                                    An engaging program designed to equip participants with skills in leadership,
-                                    collaboration, and sustainability through hands-on activities.
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Learn More:</strong>
-                                    <a href="#">Explore Summer Program Details</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Work 3: Climate Sustainability -->
-                        <div class="work-thumb">
-                            <img src="images/work/climate-sustainability.webp" class="work-image img-fluid"
-                                alt="Climate Sustainability">
-
-                            <div class="work-hover">
-                                <p>
-                                    <strong>Climate Sustainability Initiatives</strong>
-                                </p>
-
-                                <p style="color: black;">
-                                    Our initiatives focus on raising awareness and implementing strategies for a
-                                    sustainable future, emphasizing youth-driven solutions.
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Get Involved:</strong>
-                                    <a href="#">Join Our Sustainability Projects</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
@@ -796,8 +767,26 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", updateActiveLink);
     window.addEventListener("load", updateActiveLink);
 });
-
 </script>
-</body>
 
+<div id="cursor-outer"></div>
+<div id="cursor-inner"></div>
+<script>
+  const innerCursor = document.getElementById("cursor-inner");
+  const outerCursor = document.getElementById("cursor-outer");
+
+  document.addEventListener("mousemove", function(e) {
+    const x = e.clientX;
+    const y = e.clientY;
+
+    innerCursor.style.left = x + 'px';
+    innerCursor.style.top = y + 'px';
+
+    outerCursor.style.left = x + 'px';
+    outerCursor.style.top = y + 'px';
+  });
+</script>
+
+
+</body>
 </html>
