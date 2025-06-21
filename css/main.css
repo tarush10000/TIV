@@ -1364,66 +1364,88 @@ strong {
 
 
 .join-now-section {
-  /* background: #f5f5f5; */
-  padding: 60px 40px;
+  padding: 60px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
 }
 
 .join-now-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /* background: white; */
-  padding: 40px;
+  max-width: 750px;
+  width: 100%;
+  background: #fff;
+  padding: 40px 30px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  max-width: 1100px;
-  width: 100%;
+  text-align: center;
 }
 
-.join-now-left {
-  flex: 1;
-  padding: 20px;
-  min-width: 250px;
-}
-
-.join-now-left h2 {
+.join-now-container h2 {
   font-size: 2rem;
   color: #ff5a00;
   margin-bottom: 10px;
 }
 
-.join-now-left p {
+.join-now-container p {
   font-size: 1rem;
   color: #333;
-}
-
-.join-now-right {
-  flex: 1;
-  padding: 20px;
-  min-width: 250px;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .join-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
-.join-form input {
+.form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.form-row input {
+  flex: 1;
+  min-width: 200px;
   padding: 12px 16px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   border: 2px solid #ddd;
   border-radius: 8px;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
-.join-form input:focus {
+.join-form textarea {
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  resize: none;
+}
+
+.form-row input:focus,
+.join-form textarea:focus {
   border-color: lightblue;
   box-shadow: 0 0 8px rgba(255, 90, 0, 0.2);
   outline: none;
+}
+
+.upload-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: start;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.upload-row input[type="file"] {
+  border: none;
+  padding: 6px 0;
 }
 
 .join-form button {
@@ -1435,6 +1457,9 @@ strong {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 180px;
+  max-width: 60%;
+  margin: auto;
 }
 
 .join-form button:hover {
@@ -1442,6 +1467,14 @@ strong {
   transform: scale(1.05);
 }
 
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
 
-
-
+  .upload-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

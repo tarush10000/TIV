@@ -510,26 +510,50 @@
 </div>
 
 
-
 <section class="join-now-section">
   <div class="join-now-container">
-    <!-- Left Content -->
-    <div class="join-now-left">
-      <h2>Be the Change</h2>
-      <p>Join our mission to empower students across the nation. Fill in your details and be part of something impactful.</p>
-    </div>
+    <h2>Be the Change</h2>
+    <p>Join our mission to empower students across the nation. Whether you're a learner, a mentor, or a supporter—your journey begins here. Fill in your details below to get started.</p>
 
-    <!-- Right Form -->
-    <div class="join-now-right">
-      <form class="join-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <input type="text" placeholder="Area of Interest" required />
-        <button type="submit">Join Now</button>
-      </form>
-    </div>
+   <form action="https://formsubmit.co/1691cab764341f5d8aa509d660c69161" method="POST" enctype="multipart/form-data" class="join-form">
+  <div class="form-row">
+    <input type="text" name="Name" placeholder="Name" required />
+    <input type="email" name="Email" placeholder="Email" required />
+  </div>
+
+  <div class="form-row">
+    <input type="tel" name="Phone" placeholder="Phone Number" required />
+    <input type="text" name="Interest" placeholder="Area of Interest" required />
+  </div>
+
+  <div class="form-row">
+    <input type="text" name="Country" placeholder="Country" required />
+    <input type="text" name="City" placeholder="City" required />
+  </div>
+
+  <div class="form-row">
+    <input type="text" name="Institution" placeholder="Last Attended Institution" required />
+  </div>
+
+  <textarea name="Bio" placeholder="Brief Bio About You" rows="4" required></textarea>
+
+  <div class="upload-row">
+    <label for="cv-upload">Upload Your CV:</label>
+    <input type="file" name="CV" id="cv-upload" accept=".pdf,.doc,.docx" />
+  </div>
+
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_template" value="box" />
+  
+
+  <button type="submit">Join Now</button>
+</form>
+
   </div>
 </section>
+
+
+
 
         </div>
 
